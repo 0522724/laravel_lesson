@@ -3,7 +3,7 @@
 ## Todo一覧機能
 
 ### Todoモデルのallメソッドで実行しているSQLは何か
-- テーブル内のレコードを全権取得しているので、SELECT * FROM テーブル名(今回はtodos)。
+- テーブル内のレコードを全件取得しているので、SELECT * FROM テーブル名(今回はtodos)。
 
 ### Todoモデルのallメソッドの返り値は何か
 - Illuminate\Database\Eloquent\Collectionクラスのインスタンス
@@ -15,7 +15,7 @@
 - 第1引数に画面に表示したいbladeファイルを指定し、第2引数に渡したいデータを連想配列で指定して、Controllerで取得したデータををHTML(bladeファイル)に渡している。
 
 ### index.blade.phpの$todos・$todoに代入されているものは何か
-- $todoにはTodoModelをインスタンス化した値(今回はtodosテーブルの接続情報)が代入され、$todosにはtodosテーブルから取得した全レコードが代入されている。
+- $todoにはTodoModelをインスタンス化した値(今回はtodosテーブルのレコード情報)が代入され、$todosにはtodosテーブルから取得した全レコードが代入されている。
 
 ## Todo作成機能
 
