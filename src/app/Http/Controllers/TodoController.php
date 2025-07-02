@@ -10,6 +10,11 @@ class TodoController extends Controller
 {
     private $todo; // 追記
 
+        public function __construct(Todo $todo)
+    {
+        $this->todo = $todo;
+    }
+
     public function index()
     {
         $todos = $this->todo->all();
@@ -39,8 +44,11 @@ class TodoController extends Controller
         return view('todo.show', ['todo' => $todo]);
     }
 
-    public function __construct(Todo $todo)
+    public function edit($id)
     {
-        $this->todo = $todo;
+        // TODO: 編集対象のレコードの情報を持つTodoモデルのインスタンスを取得
+        $todo = $this->todo->find($id);
+        return view('todo.edit', ['todo' => $todo]);
+
     }
 }
